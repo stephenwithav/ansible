@@ -3,4 +3,4 @@ python:
   - "2.6"
 install:
   - "pip install paramiko PyYAML Jinja2 httplib2"
-script: make tests
+script: nosetests -v -w test/units/ --with-coverage --cover-erase --cover-package=ansible --cover-branch
